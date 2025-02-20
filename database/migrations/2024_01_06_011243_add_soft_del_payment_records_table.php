@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('payment_records', function (Blueprint $table) {
+        /* Schema::table('payment_records', function (Blueprint $table) {
             $table->softDeletes();
-        });
+        }); */
     }
 
     /**
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('payment_records', function (Blueprint $table) {
+        /* Schema::table('payment_records', function (Blueprint $table) {
             //
-        });
+        }); */
     }
 };
