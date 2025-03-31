@@ -45,10 +45,17 @@ class VerificationMail extends Mailable
     //     );
     // }
 
-    public function build()
+    /* public function build()
     {
         return $this->view('email')
             ->with(['verificationCode' => $this->verificationCode]);
+    } */
+
+    public function build()
+    {
+        return $this->subject($this->subject)
+                    ->view('emails.verification')
+                    ->with(['code' => $this->verificationCode]);
     }
 
     /**

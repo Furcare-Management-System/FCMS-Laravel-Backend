@@ -25,6 +25,7 @@ class StorePetOwnerRequest extends FormRequest
         return [
             'firstname' => 'required|string|max:55',
             'lastname' => 'required|string|max:55',
+            'email'=> ['required', 'email'],
             'contact_num' => 'required|string|size:10',
             'user_id' => 'exists:users,id',
             'zipcode_id' => 'exists:zipcodes,id',
