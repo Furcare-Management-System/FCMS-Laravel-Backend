@@ -103,6 +103,7 @@ class PetController extends Controller
 
             $data['photo'] = $name_path;
         }
+        
         $data['petowner_id'] = $petOwner->id;
 
         $pet = Pet::create($data); //create pet
